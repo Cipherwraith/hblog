@@ -32,3 +32,5 @@ Quick Usage Directions:
 ```haskell
 runhaskell Main.hs
 ```
+
+5. Finally update all the files in the "html" folder to your web server.
