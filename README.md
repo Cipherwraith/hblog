@@ -1,7 +1,13 @@
 minimal-blogger
 ===============
 
-The source code I use to generate the static html for my blog.
+Static HTML generator for minimal blogs. Write your posts using markdown and the blog is built automatically.
+
+Current features:
+* RSS Feed 
+* Archives 
+* Most Recent Posts 
+* CSS Bindings
 
 Quick Usage Directions:
 
