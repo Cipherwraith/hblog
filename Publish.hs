@@ -18,7 +18,7 @@ preparePost x = Publish x (_date x) (T.take 100 $ _contentRaw x) content publish
       <.> "html"
     content = wrapClass "post" $ 
                     mconcat [ wrapClass "title" $ wrapUrl publishUrl (_title x)
-                            , wrapClass "date" $ T.pack . show $ (_date x)
+                            , wrapClass "date" $ T.pack . show $ convertTimeToString (_date x)
                             , wrapClass "author" $ _author x
                             , wrapClass "content" $ _contentPretty x
                             ]
