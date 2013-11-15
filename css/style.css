@@ -1,2 +1,160 @@
-body{
+a:link {
+  color: #1B428D;
+  text-decoration:none;
 }
+
+a:visited {
+  color: #1B428D;
+  text-decoration:none;
+}
+
+a:hover {
+  color: #1B428D;
+  text-decoration:underline;
+}
+
+a:active {
+  color: #1B428D;
+  text-decoration:underline;
+}
+
+code { 
+  font-size: 90%;
+  line-height: 1.2em;
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  display: inline; 
+  color: #555555;
+  padding: 1em 1em;
+}
+
+pre {
+  height:1%;
+  width: auto;
+  display: block;
+  clear: both;
+  color: #555555;
+  padding: 1em 1em;
+  margin: auto 40px auto 40px;
+  background: #f4f4f4;
+  border: solid 1px #e1e1e1
+  line-height: 1.2em;
+  font-family: "Courier 10 Pitch", Courier, monospace; 
+  white-space: pre; 
+  white-space: pre-wrap; 
+  white-space: -moz-pre-wrap; 
+  white-space: -o-pre-wrap; 
+}
+
+.logo {
+  margin-top: 2%;
+}
+
+.topTitle {
+  text-decoration:none;
+  padding-left: 5%;
+  letter-spacing: 6pt;
+  font-family: "palatino linotype",palatino,serif;
+  font-size: 1.2em;
+}
+
+.catchPhrase {
+  font-size: 0.75em;
+  padding-left: 10%;
+}
+
+.date {
+  font-size: 0.8em;  
+  text-align: right;
+  width:85%;
+}
+
+.author {
+  font-size: 0.8em;  
+  text-align: right;
+  width:85%;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.body {
+  color: #333;
+  font-family: helvetica,sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.4pt;
+  word-spacing: 0.8pt;
+  line-height: 1.6;
+}
+
+.posts {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+
+.post {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  border-bottom-width:1px;
+  border-bottom-color:#EEE;
+  border-bottom-style: solid;
+  padding-bottom: 2%;
+}
+
+.recent {
+  float:right;
+  width:15%;
+  overflow: hidden;
+  clear:both;
+}
+
+.rss {
+  float: right;
+  width:15%;
+  clear:both;
+}
+
+.archives {
+  width: 100%;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  text-align: center;
+  margin-bottom: 3%;
+  font-size: 2em;
+}
+
+.archivesContent {
+  padding-left: 15%;
+  text-align: left;
+  font-size: 0.8em;
+}
+
+.footer {
+  font-family: helvetica,sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.4pt;
+  word-spacing: 0.8pt;
+  line-height: 1.6;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .recent {
+      float: none;
+      width: 100%;
+      clear: both;
+    }
+
+    .rss {
+      float: none;
+      width: 100%;
+    }
+
+}
+
