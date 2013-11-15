@@ -9,6 +9,8 @@ Current features:
 * Most Recent Posts 
 * CSS Bindings
 
+You can see an example of an hblog website [here](http://www.latermuse.com).
+
 Quick Usage Directions:
 
 1. Put your posts into the /posts/ directory. One post per file. The posts should be in the following format:
