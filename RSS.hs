@@ -6,7 +6,12 @@ import Network.URI
 import Types
 import Text.RSS
 import qualified Data.Text.Lazy as T
+import Config
+import System.FilePath
 
+writeRSSFeed publish = do
+  let feed = (showXML . rssToXML . makeRSS) $ take 10 publish
+  writeFile (rssDirectory </> "rss" <.> "xml") feed
 
 makeRSS :: [Publish] -> RSS
 makeRSS x = RSS 
@@ -21,9 +26,9 @@ newestPosts :: [Publish] -> [Item]
 newestPosts = map newPost 
   where
     newPost x =   [ (Title $ T.unpack . _title . _post $ x)
-                  , Link (fromJust $ parseURI "http://www.asdf.com")
+                  , Link (fromJust $ parseURI (_publishedURL x))
                   , Description (T.unpack . _description $ x)
-                  , Author "Cipher Wraith"
+                  , Author "asdf"
                   , Category Nothing "Haskell"
                   , PubDate ( posixSecondsToUTCTime (fromInteger (_time x) :: POSIXTime))
                   , Source (fromJust (parseURI "http://www.asdf.com/")) "asdf!"]
