@@ -19,7 +19,8 @@ Quick Usage Directions:
 
 * Edit the templates in the css and templates directories.
 
-* Run the following command to compile the blog into the "html" folder
+* Run the following command to compile the blog into the "html" folder:
 
 ```haskell
 runhaskell Main.hs
+```
