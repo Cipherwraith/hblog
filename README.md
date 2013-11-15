@@ -14,3 +14,9 @@ Quick Usage Directions:
     > Line 3: Author Name
     
     > Line 4 - eof: Markdown of the post content
+
+* Setup the paths in the Config.hs file. Only need to edit the "siteDirectory" function to point to where your files are.
+
+* Edit the templates in the css and templates directories.
+
+* Run the command [code]runhaskell Main.hs[/code]
