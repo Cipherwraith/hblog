@@ -7,14 +7,18 @@ import RSS
 import Text.RSS
 import Config
 import System.FilePath
+import GenerateArchives
 import GenerateIndex
+import GeneratePosts
+import RecentPosts
 
 main = do
   posts <- getPosts
   let publish = map preparePost posts
-  let feed = (showXML . rssToXML . makeRSS) $ take 10 publish
-  writeFile (rssDirectory </> "rss" <.> "xml") feed
-  index <- generateIndex publish
-  T.writeFile indexLocation index
+  let recent = recentPosts publish 5
+  writeRSSFeed publish
+  writeIndex publish recent
+  writePosts publish recent
+  writeArchives publish recent
   putStrLn "Finish"
 
