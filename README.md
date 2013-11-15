@@ -9,7 +9,7 @@ Quick Usage Directions:
     
     > Line 1: Post Title
 
-    >Line 2: Unix epoch timestamp of post creation date
+    > Line 2: Unix epoch timestamp of post creation date
     
     > Line 3: Author Name
     
@@ -21,4 +21,5 @@ Quick Usage Directions:
 
 * Run the following command to compile the blog into the "html" folder
 
-    > runhaskell Main.hs
+```haskell
+runhaskell Main.hs
