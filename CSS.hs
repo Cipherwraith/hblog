@@ -4,13 +4,13 @@ import System.Directory
 import System.FilePath
 import Config
 
-outputCSS :: IO ()
-outputCSS = do
+writeCSS :: IO ()
+writeCSS = do
   cssFiles <- getCSSFiles
   let c = length cssFiles
-  mapM_ writeCSS cssFiles
+  mapM_ writeCSS' cssFiles
 
-writeCSS (path, content) = writeFile outPath content
+writeCSS' (path, content) = writeFile outPath content
   where
     outPath = replaceDirectory path htmlDirectory
 
