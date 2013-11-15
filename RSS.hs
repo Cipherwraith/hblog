@@ -1,5 +1,7 @@
 module RSS where
 
+import Utility
+import Data.Time
 import Data.Time.Clock.POSIX
 import Data.Maybe
 import Network.URI
@@ -30,7 +32,7 @@ newestPosts = map newPost
                   , Description (T.unpack . _description $ x)
                   , Author "asdf"
                   , Category Nothing "Haskell"
-                  , PubDate ( posixSecondsToUTCTime (fromInteger (_time x) :: POSIXTime))
+                  , PubDate (convertTimeToString (_time x))
                   , Source (fromJust (parseURI "http://www.asdf.com/")) "asdf!"]
 
 
