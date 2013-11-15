@@ -1,5 +1,5 @@
-minimal-blogger
-===============
+hblog
+=====
 
 Static HTML generator for minimal blogs. Write your posts using markdown and the blog is built automatically.
 
