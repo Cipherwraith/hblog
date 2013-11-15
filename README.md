@@ -33,4 +33,4 @@ Quick Usage Directions:
 runhaskell Main.hs
 ```
 
-5. Finally update all the files in the "html" folder to your web server.
+5. Finally upload all the files in the "html" folder to your web server.
