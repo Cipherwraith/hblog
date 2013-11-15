@@ -8,7 +8,7 @@ import Utility
 import Data.Char
 
 preparePost :: Post -> Publish
-preparePost x = Publish x (_date x) (T.take 100 $ _contentRaw x) content publishUrl
+preparePost x = Publish x (_date x) ((`T.append` (T.pack "...")) . T.unwords . take 50 . T.words $ _contentPretty x) content publishUrl
   where
     publishUrl = staticDirectory </> 
       (map toLower 
