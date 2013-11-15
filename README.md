@@ -11,7 +11,7 @@ Current features:
 
 Quick Usage Directions:
 
-* Put your posts into the /posts/ directory. One post per file. The posts should be in the following format:
+1. Put your posts into the /posts/ directory. One post per file. The posts should be in the following format:
     
     > Line 1: Post Title
 
@@ -21,11 +21,11 @@ Quick Usage Directions:
     
     > Line 4 - eof: Markdown of the post content
 
-* Setup the paths in the Config.hs file. Only need to edit the "siteDirectory" function to point to where your files are.
+2. Setup the paths in the Config.hs file. Only need to edit the "siteDirectory" function to point to where your files are.
 
-* Edit the templates in the css and templates directories.
+3. Edit the templates in the css and templates directories.
 
-* Run the following command to compile the blog into the "html" folder:
+4. Run the following command to compile the blog into the "html" folder:
 
 ```haskell
 runhaskell Main.hs
