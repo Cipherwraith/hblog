@@ -23,7 +23,7 @@ Quick Usage Directions:
     
     > Line 4 -> eof: Markdown of the post content
 
-2. Setup the paths in the Config.hs file. Only need to edit the "siteDirectory" function to point to where your files are.
+2. Setup the paths in the Config.hs file. Only need to edit the "siteDirectory" function to point to where your files are. Make sure the directories in the Config.hs file exist. (hblog doesnt currently create directories)
 
 3. Edit the templates in the css and templates directories.
 
