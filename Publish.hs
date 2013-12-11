@@ -8,13 +8,13 @@ import Utility
 import Data.Char
 
 preparePost :: Post -> Publish
-preparePost x = Publish x (_date x) ((`T.append` (T.pack "...")) . T.unwords . take 50 . T.words $ _contentPretty x) content publishUrl
+preparePost x = Publish x (_date x) (_contentPretty x) content publishUrl
   where
     publishUrl = staticDirectory </> 
       (map toLower 
       . T.unpack 
       . removeWhitespace 
-      $ (mconcat [_author x, T.pack "-", (removeNonAlphaNum $ _title x)])) 
+      $ mconcat [_author x, T.pack "-", removeNonAlphaNum $ _title x])
       <.> "html"
     content = wrapClass "post" $ 
                     mconcat [ wrapClass "title" $ wrapUrl publishUrl (_title x)
